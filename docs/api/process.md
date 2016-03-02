@@ -1,22 +1,19 @@
 # process
 
-The `process` object in Electron has the following differences from the one in
-upstream node:
+这个 `process` 对象在Electron有的以下差异从中的一个上行 node:
 
-* `process.type` String - Process's type, can be `browser` (i.e. main process)
+* `process.type` String - Process's type, 可以是 `browser` (i.e. main process)
   or `renderer`.
-* `process.versions['electron']` String - Version of Electron.
-* `process.versions['chrome']` String - Version of Chromium.
-* `process.resourcesPath` String - Path to JavaScript source code.
-* `process.mas` Boolean - For Mac App Store build, this value is `true`, for
-  other builds it is `undefined`.
+* `process.versions['electron']` String - Electron的版本。
+* `process.versions['chrome']` String - Chromium的版本。
+* `process.resourcesPath` String - JavaScript 源代码的路径.
+* `process.mas` Boolean - Mac 应用商店生成, 此值是 `true`, 对于其他生成其值为 `undefined`.
 
-## Events
+## 事件
 
-### Event: 'loaded'
+### 事件: 'loaded'
 
-Emitted when Electron has loaded its internal initialization script and is
-beginning to load the web page or the main script.
+当Electron已加载其内部初始化脚本，并开始加载 web 页或主脚本时发出。
 
 It can be used by the preload script to add removed Node global symbols back to
 the global scope when node integration is turned off:
